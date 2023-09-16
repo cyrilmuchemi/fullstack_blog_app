@@ -47,7 +47,7 @@
             <h3 class="profile-text">The Impact of Technology on<br/> the Workplace: How<br/> Technology is Changing</h3>
             </article>
             <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle" alt="profile picture" width="45" height="45"/>
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
           </div>

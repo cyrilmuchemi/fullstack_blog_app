@@ -3,27 +3,18 @@
     margin-top: -13.13rem;
     z-index: 10;
     margin-left: 6rem;
-    width: 498px;
+    width: 50%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 992px){
 	.hero-profile-box {
         border-radius: 2px solid #97989F;
-        width: 398px;
         margin-top: -7.7rem;
         margin-left: 3rem;
         box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    }
-}
-
-@media only screen and (max-width: 500px){
-	.hero-profile-box {
-        border-radius: 2px solid #97989F;
-        width: 320px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        margin-top: -4.7rem;
-        margin-left: 1rem;
+        width: 60%;
     }
 
     .profile-text{
@@ -32,6 +23,47 @@
 
     .profile-description{
         font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+	.hero-profile-box {
+        border-radius: 2px solid #97989F;
+        margin-top: -7.7rem;
+        margin-left: 3rem;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        width: 70%;
+    }
+
+    .profile-text{
+        font-size: 16px;
+    }
+
+    .profile-description{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+	.hero-profile-box {
+        border-radius: 2px solid #97989F;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        margin-top: -4.7rem;
+        margin-left: 1rem;
+        width: 80%;
+    }
+
+    .profile-text{
+        font-size: 12px;
+    }
+
+    .profile-description{
+        font-size: 10px;
+    }
+
+    .profile-pic {
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -65,3 +97,7 @@
     color: #696A75;
 }
 
+.profile-pic {
+    width: 45px;
+    height: 45px;
+}
