@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/headers.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
   </head>
   <body>
   <header class="p-3 text-bg-dark">
@@ -35,8 +36,23 @@
       </div>
     </div>
   </header>
-  <main id="main" class="">
-
+  <main id="main" class="container mt-3">
+    <div class="image-container d-flex flex-column p-2">
+        <img src="assets/images/cyber-girl.png" class="img-fluid rounded" alt="hero image" />
+        <div class="bg-light p-4 rounded-top d-flex align-self-start flex-column  hero-profile-box">
+            <article>
+            <button type="button" class="btn btn-primary btn-sm">Technology</button>
+            </article>
+            <article class="py-2">
+            <h3 class="profile-text">The Impact of Technology on<br/> the Workplace: How<br/> Technology is Changing</h3>
+            </article>
+            <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle" alt="profile picture" width="45" height="45"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+          </div>
+        </div>
+    </div>
   </main>
 <div class="container">
   <footer class="py-5">
