@@ -40,3 +40,28 @@
     padding-top: 10px;
     color: #97989F;
 }
+
+.ads-box{
+    width: 65%;
+    background-color: #e8e8ea;
+    text-align: center;
+    cursor: pointer;
+    margin-inline: 20%;
+}
+
+#advert{
+    font-size: 14px;
+    color: #696A75;
+}
+
+#advert-desc{
+    font-size: 20px;
+    color: #696A75;
+    font-weight: 500;
+}
+
+#advert-measure{
+    font-size: 18px;
+    color: #696A75;
+}
+

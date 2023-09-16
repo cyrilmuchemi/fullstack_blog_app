@@ -18,11 +18,11 @@
             <img class="rounded-circle shadow" src="assets/images/blog-logo.png" alt="" width="58" height="58">
         </a>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-lg-5">
-          <li><a href="#" class="nav-link px-3 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-3 text-white">Blog</a></li>
-          <li><a href="#" class="nav-link px-3 text-white">Single Post</a></li>
-          <li><a href="#" class="nav-link px-3 text-white">Pages</a></li>
-          <li><a href="#" class="nav-link px-3 text-white">Contact</a></li>
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Blog</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Single Post</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pages</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
@@ -39,7 +39,7 @@
   <main id="main" class="container mt-3">
     <div class="image-container d-flex flex-column p-2">
         <img src="assets/images/cyber-girl.png" class="img-fluid rounded" alt="hero image" />
-        <div class="bg-light p-4 rounded-top d-flex align-self-start flex-column  hero-profile-box">
+        <div class="bg-light p-4 rounded-top rounded-bottom d-flex align-self-start flex-column  hero-profile-box">
             <article>
             <button type="button" class="btn btn-primary btn-sm">Technology</button>
             </article>
@@ -52,6 +52,11 @@
               <span class="profile-description"><p>August 20 2023</p></span>
           </div>
         </div>
+    </div>
+    <div class="ads-box d-flex flex-column mt-5 p-2 align-items-center justify-content-center rounded-top rounded-bottom ">
+      <span id="advert">Advertisement</span>
+      <span id="advert-desc">You can place ads</span>
+      <span id="advert-measure">750×100</span>
     </div>
   </main>
 <div class="container">
