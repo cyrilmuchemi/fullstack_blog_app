@@ -6,16 +6,16 @@
     <meta name="description" content="">
     <title>Home - MetaBlog</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/headers.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="<?=ROOT?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=ROOT?>/assets/css/headers.css" rel="stylesheet">
+    <link href="<?=ROOT?>/assets/css/styles.css" rel="stylesheet">
   </head>
   <body>
   <header class="p-3 text-bg-dark">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/home" class="d-flex align-items-center mb-2 mb-lg-0">
-            <img class="rounded-circle shadow" src="assets/images/blog-logo.png" alt="" width="58" height="58">
+            <img class="rounded-circle shadow" src="<?=ROOT?>/assets/images/blog-logo.png" alt="" width="58" height="58">
         </a>
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ms-lg-5">
           <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
@@ -38,7 +38,7 @@
   </header>
   <main id="main" class="container mt-3">
     <div class="image-container d-flex flex-column p-2">
-        <img src="assets/images/cyber-girl.png" class="img-fluid rounded" alt="hero image" />
+        <img src="<?=ROOT?>/assets/images/cyber-girl.png" class="img-fluid rounded" alt="hero image" />
         <div class="bg-light p-4 rounded-top rounded-bottom d-flex align-self-start flex-column  hero-profile-box">
             <article>
             <button type="button" class="btn btn-primary btn-sm">Technology</button>
@@ -47,7 +47,7 @@
             <h3 class="profile-text">The Impact of Technology on<br/> the Workplace: How<br/> Technology is Changing</h3>
             </article>
             <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
           </div>
@@ -66,11 +66,11 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-          <img src="assets/images/beach-chilling.jpg" class="img-fluid"/>
+          <img src="<?=ROOT?>/assets/images/beach-chilling.jpg" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
               </div>
@@ -79,11 +79,11 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <img src="assets/images/vr-sitting.jpg" class="img-fluid"/>
+            <img src="<?=ROOT?>/assets/images/vr-sitting.jpg" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
               </div>
@@ -92,51 +92,11 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-          <img src="assets/images/boxing.jpg" class="img-fluid"/>
+          <img src="<?=ROOT?>/assets/images/boxing.jpg" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
-              <span class="profile-description"><p>Lydia Matson</p></span>
-              <span class="profile-description"><p>August 20 2023</p></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-          <img src="assets/images/old-school-car.jpg" class="img-fluid"/>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
-              <span class="profile-description"><p>Lydia Matson</p></span>
-              <span class="profile-description"><p>August 20 2023</p></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-          <img src="assets/images/gaming-sitting.jpg" class="img-fluid"/>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
-              <span class="profile-description"><p>Lydia Matson</p></span>
-              <span class="profile-description"><p>August 20 2023</p></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-          <img src="assets/images/cool-home.jpg" class="img-fluid"/>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
               </div>
@@ -146,11 +106,11 @@
 
         <div class="col">
           <div class="card shadow-sm">
-          <img src="assets/images/stadium.jpg" class="img-fluid"/>
+          <img src="<?=ROOT?>/assets/images/old-school-car.jpg" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
               </div>
@@ -159,11 +119,11 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-          <img src="assets/images/private-jet.jpg" class="img-fluid"/>
+          <img src="<?=ROOT?>/assets/images/gaming-sitting.jpg" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
               </div>
@@ -172,11 +132,51 @@
         </div>
         <div class="col">
           <div class="card shadow-sm">
-          <img src="assets/images/hijab-babe.jpg" class="img-fluid"/>
+          <img src="<?=ROOT?>/assets/images/cool-home.jpg" class="img-fluid"/>
             <div class="card-body">
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex">
-              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="<?=ROOT?>/assets/images/stadium.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="<?=ROOT?>/assets/images/private-jet.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="<?=ROOT?>/assets/images/hijab-babe.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="<?=ROOT?>/assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
               <span class="profile-description"><p>Lydia Matson</p></span>
               <span class="profile-description"><p>August 20 2023</p></span>
               </div>
@@ -251,6 +251,6 @@
     </div>
   </footer>
 </div>
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?=ROOT?>/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
