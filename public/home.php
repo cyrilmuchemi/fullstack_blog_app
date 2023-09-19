@@ -53,13 +53,146 @@
           </div>
         </div>
     </div>
-    <div class="ads-box d-flex flex-column mt-5 p-2 align-items-center justify-content-center rounded-top rounded-bottom ">
+    <div class="ads-box d-flex flex-column mt-5 p-2 align-items-center justify-content-center rounded-top rounded-bottom">
+      <span id="advert">Advertisement</span>
+      <span id="advert-desc">You can place ads</span>
+      <span id="advert-measure">750×100</span>
+    </div>
+    <h4 class="home-heading font-weight-bolder mx-3 mt-5">Latest Post</h4>
+
+    <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/beach-chilling.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="assets/images/vr-sitting.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/boxing.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/old-school-car.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/gaming-sitting.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/cool-home.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/stadium.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/private-jet.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+          <img src="assets/images/hijab-babe.jpg" class="img-fluid"/>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex">
+              <img src="assets/images/Lydia-Matson.jpg" class="rounded-circle profile-pic" alt="profile picture"/>
+              <span class="profile-description"><p>Lydia Matson</p></span>
+              <span class="profile-description"><p>August 20 2023</p></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ads-box d-flex flex-column mt-5 p-2 align-items-center justify-content-center rounded-top rounded-bottom">
       <span id="advert">Advertisement</span>
       <span id="advert-desc">You can place ads</span>
       <span id="advert-measure">750×100</span>
     </div>
   </main>
-<div class="container">
+<div class="container mt-2">
   <footer class="py-5">
     <div class="row">
       <div class="col-6 col-md-2 mb-3">
@@ -109,7 +242,7 @@
     </div>
 
     <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>&copy; 2023 Company, Inc. All rights reserved.</p>
+      <p>&copy; 2023 MetaBlog. All rights reserved.</p>
       <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
         <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
