@@ -1,6 +1,6 @@
 <?php
 
-define('ROOT', 'http://localhost/fullstack_blog_app/public');
+require "../app/core/init.php";
 
 $url = $_GET['url'] ?? 'home';
 $url = explode("/", $url);
