@@ -7,7 +7,7 @@ function query(string $query, array $data = [])
     $con = new PDO($string, DBUSER, DBPASS);
 
     $stm = $con->prepare($query);
-    $stm->execute();
+    $stm->execute($data);
 
     $result = $stm->fetchAll(PDO::FETCH_ASSOC);
 
@@ -17,6 +17,29 @@ function query(string $query, array $data = [])
     }
 
     return false;
+}
+
+function redirect($page)
+{
+    header('Location: ' .$page);
+
+    die();
+}
+
+function old_value($key)
+{
+    if(!empty($_POST[$key]))
+        return $_POST[$key];
+
+    return "";
+}
+
+function old_checked($key)
+{
+    if(!empty($_POST[$key]))
+        return " checked ";
+
+    return "";
 }
 
 //create_tables();
