@@ -1,35 +1,30 @@
-<?php
+<?php 
 
-if(!empty($_POST))
-{
-  //validate
-  $errors = [];
-
-  $query = "select * where email = :email limit 1";
-  $row = query($query, ['email'=>$_POST['email']]);
-
-  if($row)
+  if(!empty($_POST))
   {
-    //Authenticate
-    $data = [];
-    
-    if(password_verify($_POST['password'], $row[0]['password']))
-    {
-      //grant access
-      authenticate($row[0]);
-      redirect('admin');
+    //validate
+    $errors = [];
 
-    } else 
+    $query = "select * from users where email = :email limit 1";
+    $row = query($query, ['email'=>$_POST['email']]);
+
+    if($row)
     {
-      $errors['email'] = "Wrong email or password!";
+      $data = [];
+      if(password_verify($_POST['password'], $row[0]['password']))
+      {
+        //grant access
+        authenticate($row[0]);
+        redirect('admin');
+
+      }else{
+        $errors['email'] = "wrong email or password";
+      }
+
+    }else{
+      $errors['email'] = "wrong email or password";
     }
-
-  } else 
-  {
-    $errors['email'] = "Wrong email or password!";
   }
-}
-
 ?>
 
 <!doctype html>
