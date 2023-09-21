@@ -42,6 +42,11 @@ function old_checked($key)
     return "";
 }
 
+function authenticate($row)
+{
+    $_SESSION['USER'] = $row;
+}
+
 //create_tables();
 
 function create_tables()
