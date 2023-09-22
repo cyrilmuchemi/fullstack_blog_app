@@ -1,7 +1,26 @@
+<?php
+
+  if(!logged_in())
+  {
+    redirect('login');
+  }
+
+  
+  $section = $url[1] ?? 'dashboard';
+  $action = $url[2] ?? 'view';
+
+  $filename = "../app/pages/admin/".$section.".php";
+
+  if(!file_exists($filename))
+  {
+    $filename = "../app/pages/admin/404.php";
+  } 
+ 
+?>
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="../assets/js/color-modes.js"></script>
-
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -183,18 +202,8 @@
       </div>
       <?php
 
-        $section = $url[1] ?? 'dashboard';
-
-        $filename = "../app/pages/admin/".$section.".php";
-
-        if(file_exists($filename))
-        {
           require_once $filename;
-        } else
-        {
-          require_once "../app/pages/admin/404.php";
-        }
-
+      
       ?>
     </main>
   </div>

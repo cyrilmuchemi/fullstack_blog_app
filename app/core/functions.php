@@ -55,6 +55,11 @@ function logged_in()
     return false;
 }
 
+function esc($str)
+{
+    return htmlspecialchars($str ?? '');
+}
+
 function str_to_url($url)
 {
 
