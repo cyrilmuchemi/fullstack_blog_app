@@ -19,7 +19,7 @@ if(!empty($_POST))
 
   if(empty($_POST['email']))
   {
-    $errors['email'] = "A email is required";
+    $errors['email'] = "Email is required";
   }else
   if(!filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
   {
@@ -32,7 +32,7 @@ if(!empty($_POST))
 
   if(empty($_POST['password']))
   {
-    $errors['password'] = "A password is required";
+    $errors['password'] = "Password is required";
   }else
   if(strlen($_POST['password']) < 8)
   {
