@@ -40,7 +40,7 @@ function query_row(string $query, array $data = [])
 
 function redirect($page)
 {
-    header('Location: ' .$page);
+    header('Location: '.ROOT. '/' . $page);
 
     die();
 }
