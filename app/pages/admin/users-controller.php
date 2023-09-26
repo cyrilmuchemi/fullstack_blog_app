@@ -112,6 +112,22 @@ if($action == 'add')
           {
             $errors['password'] = "Passwords do not match";
           }
+
+          //Validate image
+          $allowed = ['image/jpeg', 'image/png', 'image/webp'];
+
+          if(!empty($_FILES['image']['name']))
+          {
+            $destination = "";
+            if(!in_array($_FILES['image']['type'], $allowed))
+            {
+              $errors['image'] = "image format not supported";
+            }else
+            {
+              $destination = $folder . time() .$_FILES['image']['name'];
+              move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+            }
+          }
         
           if(empty($errors))
           {

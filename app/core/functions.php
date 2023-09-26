@@ -92,6 +92,18 @@ function str_to_url($url)
    return $url;
 }
 
+function get_image($file)
+{
+    $file = $file ?? '';
+
+    if(file_exists($file))
+    {
+        return ROOT.'/'.$file; 
+    }
+
+    return ROOT.'/assets/images/no_image.jpg';
+}
+
 //create_tables();
 
 function create_tables()
