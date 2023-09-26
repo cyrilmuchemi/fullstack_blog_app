@@ -45,7 +45,7 @@
             <div class="alert alert-danger">Please fix the errors below</div>
             <?php endif; ?>
             <div class="form-floating">
-            <input value="<?=old_value('username')?>" name="username" type="text" class="form-control" id="floatingInput" placeholder="Username">
+            <input value="<?=old_value('username', $row['username'])?>" name="username" type="text" class="form-control" id="floatingInput" placeholder="Username">
             <label for="floatingInput">Username</label>
             </div>
             <?php if(!empty($errors['username'])) :?>
@@ -53,7 +53,7 @@
             <?php endif; ?>
 
             <div class="form-floating">
-            <input value="<?=old_value('email')?>" name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <input value="<?=old_value('email', $row['email'])?>" name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
             <label for="floatingInput">Email address</label>
             </div>
             <?php if(!empty($errors['email'])) :?>
@@ -72,16 +72,13 @@
             <input  value="<?=old_value('retype_password')?>" name="retype_password" type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
             <label for="floatingPassword">Confirm Password</label>
             </div>
-            <button class="mt-4 btn btn-primary w-100 py-2" type="submit">Save</button>
-
+            <button class="mt-4 btn btn-primary py-2" type="submit">Save</button>
+            <a href="<?=ROOT?>/admin/users">
+            <button class="mt-4 btn btn-primary py-2 float-end" type="button">Back</button>
+            </a>
             <?php endif;?>
             </form>
-        </div>
-        <?php elseif($action == 'delete'):?>
-            
-
-
-
+        </div>        
 <?php else:?>
 <div>
 <h4>Users</h4>
