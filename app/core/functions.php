@@ -138,13 +138,14 @@ function get_pagination_vars()
         $next_link = preg_replace("/page=.*/", "page=".($page_number + 1), $current_link);
         $prev_page_number = $page_number < 2 ? 1 : $page_number - 1;
         $prev_link = preg_replace("/page=.*/", "page=".$prev_page_number, $current_link);
-        $first_link = preg_replace("/page=.*/", "page=", $current_link);
+        $first_link = preg_replace("/page=.*/", "page=1", $current_link);
 
         $result = [
             'current-link'  => $current_link,
             'next-link'     => $next_link,
             'prev-link'     => $prev_link,
             'first-link'    => $first_link,
+            'page_number'   => $page_number
         ];
 
         return $result;
