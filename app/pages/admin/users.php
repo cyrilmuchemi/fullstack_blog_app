@@ -1,15 +1,18 @@
 <?php if($action == 'add'):?>
     <div class="col-md-6 mx-auto">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
         <h1 class="h3 mb-3 fw-normal">Create an account</h1>
         <?php if(!empty($errors)) :?>
-        <div class="alert alert-danger">Please fix the errors below</div>
+        <div class="alert alert-danger"><?=$errors['image'];?></div>
         <?php endif; ?>
         <div class="my-2">
                 <label class="d-block">
-                <img class="d-block mx-auto image-preview-edit" src="<?=get_image($row['image'])?>" style="cursor: pointer;width: 150px;height: 150px;object-fit: cover;"/>
+                <img class="d-block mx-auto image-preview-edit" src="<?=get_image('')?>" style="cursor: pointer;width: 150px;height: 150px;object-fit: cover;"/>
                 <input onchange="display_image_edit(this.files[0])" type="file" name="image" class="d-none"/>
                 </label>
+                <?php if(!empty($errors['image'])):?>
+		            <div class="text-danger"><?=$errors['image']?></div>
+		        <?php endif;?>
                 <script src="<?=ROOT?>/assets/js/index.js"></script>
         </div>
         <div class="form-floating">
@@ -56,7 +59,7 @@
     </div>
     <?php elseif($action == 'edit'):?>
             <div class="col-md-6 mx-auto">
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
             <h1 class="h3 mb-3 fw-normal">Edit account</h1>
             <?php if(!empty($row)) :?>
             <?php if(!empty($errors)) :?>
@@ -67,6 +70,9 @@
                 <img class="d-block mx-auto image-preview-edit" src="<?=get_image($row['image'])?>" style="cursor: pointer;width: 150px;height: 150px;object-fit: cover;"/>
                 <input onchange="display_image_edit(this.files[0])" type="file" name="image" class="d-none"/>
                 </label>
+                <?php if(!empty($errors['image'])):?>
+		            <div class="text-danger"><?=$errors['image']?></div>
+                <?php endif;?>
                 <script src="<?=ROOT?>/assets/js/index.js"></script>
             </div>
             <div class="form-floating">
