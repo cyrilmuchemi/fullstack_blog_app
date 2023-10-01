@@ -91,6 +91,16 @@
             <div class="text-danger"><?=$errors['email']?></div>
             <?php endif; ?>
 
+                <div class="form-floating">
+            <select name="role" class="form-select">
+                <option <?=old_select('role', 'user', $row['role'])?> value="user">User</option>
+                <option <?=old_select('role', 'admin', $row['role'])?> value="admin">Admin</option>
+            </select>
+            </div>
+            <?php if(!empty($errors['role'])) :?>
+            <div class="text-danger"><?=$errors['role']?></div>
+            <?php endif; ?>
+
             <div class="form-floating">
             <input  value="<?=old_value('password')?>" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
             <label for="floatingPassword">Password</label>
