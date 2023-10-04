@@ -2,9 +2,6 @@
     <div class="col-md-6 mx-auto">
         <form method="post" enctype="multipart/form-data">
         <h1 class="h3 mb-3 fw-normal text-center">Create a post</h1>
-        <?php if(!empty($errors)) :?>
-        <div class="alert alert-danger"><?=$errors['image'];?></div>
-        <?php endif; ?>
         <div class="my-2">
                 <label class="d-block">
                 <img class="d-block mx-auto image-preview-edit" src="<?=get_image('')?>" style="cursor: pointer;width: 150px;height: 150px;object-fit: cover;"/>
@@ -31,15 +28,15 @@
         <?php endif; ?>
 
         <div class="form-floating">
-        <select name="category" class="form-select">
+        <select name="category_id" class="form-select">
             <?php
                  $query = "select * from categories order by id desc";
                  $categories = query($query);
             ?>
-            <option value="">---select---</option>
+            <option value="">---Select---</option>
             <?php if(!empty($categories)) : ?>
                 <?php foreach($categories as $cat) : ?>
-                    <option value="<?=$cat['id']?>"><?=$cat['category']?></option>
+                    <option <?=old_select('category_id', $cat['id'])?> value="<?=$cat['id']?>"><?=$cat['category']?></option>
                 <?php endforeach; ?>
             <?php endif; ?>
         </select>
@@ -54,7 +51,7 @@
     <?php elseif($action == 'edit'):?>
             <div class="col-md-6 mx-auto">
             <form method="post" enctype="multipart/form-data">
-            <h1 class="h3 mb-3 fw-normal">Edit post</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Edit post</h1>
             <?php if(!empty($row)) :?>
             <?php if(!empty($errors)) :?>
             <div class="alert alert-danger">Please fix the errors below</div>
@@ -70,43 +67,37 @@
                 <script src="<?=ROOT?>/assets/js/index.js"></script>
             </div>
             <div class="form-floating">
-            <input value="<?=old_value('username', $row['username'])?>" name="username" type="text" class="form-control" id="floatingInput" placeholder="Username">
-            <label for="floatingInput">Username</label>
+            <input value="<?=old_value('title', $row['title'])?>" name="title" type="text" class="form-control" id="floatingInput" placeholder="Username">
+            <label for="floatingInput">Title</label>
             </div>
-            <?php if(!empty($errors['username'])) :?>
-            <div class="text-danger"><?=$errors['username']?></div>
+            <?php if(!empty($errors['title'])) :?>
+            <div class="text-danger"><?=$errors['title']?></div>
+            <?php endif; ?>
+            <div>
+                <textarea rows="8" name="content" type="content" class="form-control" id="floatingInput" placeholder="Post content"><?=old_value('content', $row['content'])?></textarea>
+            </div>
+            <?php if(!empty($errors['content'])) :?>
+                <div class="text-danger"><?=$errors['content']?></div>
             <?php endif; ?>
 
             <div class="form-floating">
-            <input value="<?=old_value('email', $row['email'])?>" name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+                <select name="category_id" class="form-select">
+                    <?php
+                    $query = "select * from categories order by id desc";
+                    $categories = query($query);
+                    ?>
+                    <option value="">---Select---</option>
+                        <?php if(!empty($categories)) : ?>
+                        <?php foreach($categories as $cat) : ?>
+                            <option <?=old_select('category_id', $cat['id'], $row['category_id'])?> value="<?=$cat['id']?>"><?=$cat['category']?></option>
+                         <?php endforeach; ?>
+                        <?php endif; ?>
+                </select>
+                    <label for="floatingInput">Category</label>
             </div>
-            <?php if(!empty($errors['email'])) :?>
-            <div class="text-danger"><?=$errors['email']?></div>
+            <?php if(!empty($errors['category'])) :?>
+                <div class="text-danger"><?=$errors['category']?></div>
             <?php endif; ?>
-
-                <div class="form-floating">
-            <select name="role" class="form-select">
-                <option <?=old_select('role', 'user', $row['role'])?> value="user">User</option>
-                <option <?=old_select('role', 'admin', $row['role'])?> value="admin">Admin</option>
-            </select>
-            </div>
-            <?php if(!empty($errors['role'])) :?>
-            <div class="text-danger"><?=$errors['role']?></div>
-            <?php endif; ?>
-
-            <div class="form-floating">
-            <input  value="<?=old_value('password')?>" name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-            </div>
-            <?php if(!empty($errors['password'])) :?>
-            <div class="text-danger"><?=$errors['password']?></div>
-            <?php endif; ?>
-
-            <div class="form-floating">
-            <input  value="<?=old_value('retype_password')?>" name="retype_password" type="password" class="form-control" id="floatingPassword" placeholder="Confirm Password">
-            <label for="floatingPassword">Confirm Password</label>
-            </div>
             <button class="mt-4 btn btn-primary py-2" type="submit">Save</button>
             <a href="<?=ROOT?>/admin/posts">
             <button class="mt-4 btn btn-primary py-2 float-end" type="button">Back</button>

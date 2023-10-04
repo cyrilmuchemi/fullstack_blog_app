@@ -155,7 +155,7 @@ if($action == 'add')
             $errors['password'] = "Passwords do not match";
           }
 
-          //Validate image
+           //Validate image
           $allowed = ['image/jpeg', 'image/png', 'image/webp'];
 
           if(!empty($_FILES['image']['name']))
@@ -163,14 +163,21 @@ if($action == 'add')
             $destination = "";
             if(!in_array($_FILES['image']['type'], $allowed))
             {
-              $errors['image'] = "image format not supported";
+              $errors['image'] = "Image format not supported";
             }else
             {
-              $destination = $folder . time() .$_FILES['image']['name'];
+              $folder = "uploads/";
+              if(!file_exists($folder))
+              {
+                mkdir($folder, 0777, true);
+              }
+
+              $destination = $folder . time() . $_FILES['image']['name'];
               move_uploaded_file($_FILES['image']['tmp_name'], $destination);
               resize_image($destination);
             }
-          }
+          } 
+
         
           if(empty($errors))
           {
