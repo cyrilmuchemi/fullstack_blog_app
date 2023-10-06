@@ -1,3 +1,31 @@
+.theme-toggle {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 4rem;
+}
+
+.theme-toggle svg {
+    font-size: 24px;
+    color: #fff;
+    padding: 5px;
+}
+
+.slider {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
 .hero-profile-box {
     border-radius: 2px solid #97989F;
     margin-top: -13.13rem;
