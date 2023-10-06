@@ -2,7 +2,7 @@
     position: relative;
     width: 80px;
     height: 30px;
-    background-color: #333;
+    background-color: #F4F4F5;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -24,6 +24,10 @@
     background-color: #fff;
     border-radius: 50%;
     transition: transform 0.3s;
+}
+
+.search {
+    background-color: #F4F4F5;
 }
 
 .hero-profile-box {

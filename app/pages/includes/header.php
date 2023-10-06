@@ -35,8 +35,8 @@
         <div class="slider"></div>
         </div>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control form-control-dark text-dark" placeholder="Search..." aria-label="Search">
+        <form class="col-12 search col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control search form-control-dark text-dark" placeholder="Search..." aria-label="Search">
         </form>
 
         <div class="text-end text-dark">
