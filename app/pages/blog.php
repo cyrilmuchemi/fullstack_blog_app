@@ -18,17 +18,14 @@ include '../app/pages/includes/header.php';
           </div>
         </div>
     </div>
-    <?php
-      include '../app/pages/includes/advert-box.php';
-    ?>
-    <h4 class="home-heading font-weight-bolder mx-3 mt-5">Latest Post</h4>
-
     <div class="album py-5 bg-body-tertiary">
     <div class="container">
-
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <?php
-          $query = "select posts.*,categories.category from posts join categories on posts.category_id = categories.id order by id desc limit 9";
+          $limit = 10;
+          $offset = ($PAGE['page_number'] - 1) * $limit;
+
+          $query = "select posts.*,categories.category from posts join categories on posts.category_id = categories.id order by id desc limit $limit offset $offset";
           $rows = query($query);
           if($rows)
           {
@@ -46,14 +43,17 @@ include '../app/pages/includes/header.php';
       </div>
     </div>
   </div>
-  <div class="text-center">
-    <a href="<?=ROOT?>/blog">
-    <button>View All Post</button>
-    </a>
-  </div>
-  <?php
-      include '../app/pages/includes/advert-box.php';
-  ?>
+  <div class="col-md-12 mb-4">
+        <a href="<?=$PAGE['first-link'] ?>">
+        <button class="btn btn-primary">First Page</button>
+        </a>
+        <a href="<?=$PAGE['prev-link'] ?>">
+        <button class="btn btn-primary">Previous Page</button>
+        </a>
+        <a href="<?=$PAGE['next-link'] ?>">
+        <button class="btn btn-primary float-end">Next Page</button>
+        </a> 
+    </div>
   </main>
   <?php 
     include "../app/pages/includes/footer.php";
