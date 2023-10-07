@@ -14,7 +14,7 @@
   <header class="p-3">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/home" class="d-flex align-items-center mb-2 mb-lg-0">
+        <a href="<?=ROOT?>" class="d-flex align-items-center mb-2 mb-lg-0">
             <img class="rounded-circle shadow" src="<?=ROOT?>/assets/images/blog-logo.png" alt="" width="58" height="58">
         </a>
         <ul class="nav col-12 col-lg-auto text-dark me-lg-auto mb-2 justify-content-center mb-md-0 ms-lg-5">

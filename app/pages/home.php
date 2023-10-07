@@ -23,7 +23,7 @@ include '../app/pages/includes/header.php';
     ?>
     <h4 class="home-heading font-weight-bolder mx-3 mt-5">Latest Post</h4>
 
-    <div class="album py-5 bg-body-tertiary">
+    <div class="album py-5">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
