@@ -26,7 +26,7 @@ include '../app/pages/includes/header.php';
               <img src="<?=get_image($row['image'])?>" class="img-fluid" height="60"/>
               <div>
                 <p>
-                  <?=$row['content']?>
+                  <?=nl2br($row['content'])?>
                 </p>
               </div>
             <?php

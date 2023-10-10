@@ -9,13 +9,12 @@ include '../app/pages/includes/header.php';
           $limit = 10;
           $offset = ($PAGE['page_number'] - 1) * $limit;
 
-          $find = $_GET['find'] ?? null;
+          $category_slug = $url[1] ?? null;
 
-          if($find)
+          if($category_slug)
           {
-            $find = "%$find%";
-            $query = "select posts.*,categories.category from posts join categories on posts.category_id = categories.id where posts.title like :find order by id desc limit $limit offset $offset";
-            $rows = query($query, ['find'=>$find]);
+            $query = "select posts.*,categories.category from posts join categories on posts.category_id = categories.id where posts.category_id in (select id from categories where slug = :category_slug) order by id desc limit $limit offset $offset";
+            $rows = query($query, ['category_slug'=>$category_slug]);
           }
    
           if(!empty($rows))
