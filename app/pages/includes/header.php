@@ -22,7 +22,22 @@
           <li><a href="#" class="nav-link px-2 text-dark">Blog</a></li>
           <li><a href="#" class="nav-link px-2 text-dark">Single Post</a></li>
           <li><a href="#" class="nav-link px-2 text-dark">Pages</a></li>
-          <li><a href="#" class="nav-link px-2 text-dark">Contact</a></li>
+          <li>
+            <div class="dropdown">
+            <a href="#" class="nav-link px-2 text-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+            <ul class="dropdown-menu">
+              <?php
+                $query = "select * from categories order by id desc";
+                $categories = query($query);
+              ?>
+                <?php if(!empty($categories)) : ?>
+                  <?php foreach($categories as $cat) : ?>
+                    <li><a class="dropdown-item" href="<?=ROOT?>/category/<?=$cat['slug']?>"><?=$cat['category']?></a></li>
+                <?php endforeach; ?>
+              <?php endif; ?>
+            </ul>
+            </div>
+          </li>
         </ul>
 
         <div class="theme-toggle">
