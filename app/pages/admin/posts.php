@@ -49,6 +49,7 @@
         </form>
     </div>
     <?php elseif($action == 'edit'):?>
+        <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/summernote/summernote-lite.min.css">
             <div class="col-md-6 mx-auto">
             <form method="post" enctype="multipart/form-data">
             <h1 class="h3 mb-3 fw-normal text-center">Edit post</h1>
@@ -64,7 +65,6 @@
                 <?php if(!empty($errors['image'])):?>
 		            <div class="text-danger"><?=$errors['image']?></div>
                 <?php endif;?>
-                <script src="<?=ROOT?>/assets/js/index.js"></script>
             </div>
             <div class="form-floating">
             <input value="<?=old_value('title', $row['title'])?>" name="title" type="text" class="form-control" id="floatingInput" placeholder="Username">
@@ -74,12 +74,20 @@
             <div class="text-danger"><?=$errors['title']?></div>
             <?php endif; ?>
             <div>
-                <textarea rows="8" name="content" type="content" class="form-control" id="floatingInput" placeholder="Post content"><?=old_value('content', $row['content'])?></textarea>
+                <textarea id="summernote" rows="8" name="content" type="content" class="form-control" id="floatingInput" placeholder="Post content"><?=old_value('content', $row['content'])?></textarea>
             </div>
             <?php if(!empty($errors['content'])) :?>
                 <div class="text-danger"><?=$errors['content']?></div>
             <?php endif; ?>
-
+            <script src="<?=ROOT?>/assets/js/jquery.js"></script>
+                <script src="<?=ROOT?>/assets/summernote/summernote-lite.min.js"></script>
+                <script>
+                    $('#summernote').summernote({
+                    placeholder: 'Post content',
+                    tabsize: 2,
+                    height: 100
+                    });
+                </script>
             <div class="form-floating">
                 <select name="category_id" class="form-select">
                     <?php
